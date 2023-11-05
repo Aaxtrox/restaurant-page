@@ -1,8 +1,3 @@
-/* Hide page overflow to prevent scrolling. */
-body {
-    overflow: hidden;
-}
-
 /* Style the 'home' section with background properties. */
 #home {
     width: 100vw;

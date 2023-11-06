@@ -81,7 +81,7 @@ h2 {
         left: 0;
         right: 0;
         bottom: 0;
-        background: #9DC88D;
+        background: #fb923c;
         transform: scaleX(0);
         transform-origin: 0 50%;
         transition-property: transform;
@@ -91,7 +91,7 @@ h2 {
     }
         
     &:hover {
-        color: black;
+        color: whitesmoke;
 
         &:before {
             transform: scaleX(1);

@@ -1,3 +1,6 @@
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 /* Style the 'home' section with background properties. */
 #home {
     position: relative;
@@ -8,11 +11,13 @@
     background-position: 57% center;
 }
 
+/* Styles for the 'hero-text' element */
 #hero-text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    left: 10%;
+    transform: translateY(-50%);
+    color: whitesmoke;
+    font-family: 'Anton', sans-serif;
     text-align: center;
 }

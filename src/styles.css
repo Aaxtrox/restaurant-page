@@ -9,14 +9,14 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 57% center;
+    background-position: 53% center;
 }
 
 /* Styles for the 'hero-text' element */
 #hero-text {
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 10%;
     transform: translateY(-50%);
     color: whitesmoke;
     font-family: 'Anton', sans-serif;
@@ -35,7 +35,7 @@ h2 {
 
 /* Order Now button styles */
 .btn-wrapper {
-    grid-row: 3;
+    margin-top: 5rem;
 }
 
 .btn {
@@ -128,5 +128,7 @@ h2 {
 @media (max-width: 500px) {
     #hero-text {
         top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

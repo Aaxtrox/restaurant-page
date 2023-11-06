@@ -15,9 +15,20 @@
 #hero-text {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     transform: translateY(-50%);
     color: whitesmoke;
     font-family: 'Anton', sans-serif;
     text-align: center;
+}
+
+/* Styles for the <h1> element */
+h1 {
+    font-size: 3rem;
+}
+
+/* Styles for the <h2> element */
+h2 {
+    font-size: 2rem;
+    display: flex;
 }

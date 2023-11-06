@@ -1,8 +1,18 @@
 /* Style the 'home' section with background properties. */
 #home {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 77% center;
+    background-position: 57% center;
+}
+
+#hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }

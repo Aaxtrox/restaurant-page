@@ -45,6 +45,28 @@ const home = function () {
 
     // Append the 'heroSubtitle' element as a child to the 'heroText' element
     heroText.appendChild(heroSubtitle);
+
+    // Create a new div element inside the 'heroText' element
+    const btnWrapper = document.createElement('div');
+
+    // Assign the id attribute to the newly created element
+    btnWrapper.classList.add('btn-wrapper');
+
+    // Append the 'btnWrapper' element as a child to the 'heroText' element
+    heroText.appendChild(btnWrapper);
+
+    // Create a new div element inside the 'btnWrapper' element
+    const btn = document.createElement('div');
+
+    // Assign the id attribute 'btn btn--border btn--primary btn--animated' to the newly created element
+    btn.classList.add('btn', 'btn--border', 'btn--primary', 'btn--animated');
+
+    // Set the innerHTML of the 'btn' element
+    btn.innerHTML = 'Order Now';
+
+    // Append the 'btn' element as a child to the 'btnWrapper' element
+    btnWrapper.appendChild(btn);
+
 }
 
 // Export the 'home' function as the default export of this module.

@@ -1,5 +1,6 @@
 /* Import custom font */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 /* Style the 'home' section with background properties. */
 #home {
@@ -30,6 +31,73 @@ h1 {
 /* Styles for the <h2> element */
 h2 {
     font-size: 2rem;
+}
+
+/* Order Now button styles */
+.btn-wrapper {
+    grid-row: 3;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 1.2px;
+    padding: 0.625rem 1.438rem;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn--primary {
+    color: whitesmoke;
+    font-size: 1.6rem;
+    font-family: Anton, sans-serif;
+}
+
+.btn--border {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.btn--animated {
+    transition-property: color;
+    transition-duration: 0.5s;
+    
+    &.btn--border.btn--primary {
+        border: 1px solid whitesmoke;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #9DC88D;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+        z-index: -1;
+    }
+        
+    &:hover {
+        color: black;
+
+        &:before {
+            transform: scaleX(1);
+            transition-timing-function: cubic-bezier(0.45, 1.64, 0.47, 0.66);
+        }
+    }
 }
 
 /* Media Queries */

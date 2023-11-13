@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+}
+
 /* Style the 'home' section with background properties. */
 #home {
     position: relative;

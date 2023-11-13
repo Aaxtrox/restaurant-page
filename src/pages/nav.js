@@ -17,9 +17,46 @@ const nav = function () {
 
     // Setting the image source
     logoImg.src = logo;
-    
+
     // Appending the image to the header
     header.appendChild(logoImg);
+
+    // Creating a new unordered list element
+    const menu = document.createElement('ul');
+
+    // Adding a CSS class to the newly created unordered list
+    menu.classList.add('menu');
+
+    // Appending the unordered list to the header
+    header.appendChild(menu);
+
+    // An array containing menu items
+    const menuList = ['Home', 'Menu', 'Contact'];
+
+    // Iterating through each menu item in the array
+    menuList.forEach((item) => {
+
+        // Creating a list item for each menu item
+        const menuItem = document.createElement('li');
+
+        // Adding a CSS class to the list item
+        menuItem.classList.add('menu-item');
+
+        // Appending each list item to the unordered list
+        menu.appendChild(menuItem);
+
+        // Add a element to each list item
+        const link = document.createElement('a');
+
+        // Set the href attribute of the link element
+        link.href = '#';
+
+        // Set the inner text of the link element
+        link.innerHTML = item;
+
+        // Append the link element to the list item
+        menuItem.appendChild(link);
+    });
 }
 
 // Export the 'nav' function.

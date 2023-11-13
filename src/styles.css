@@ -2,20 +2,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-/* Navbar */
+/* Styling for the header element */
 header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 10vh;
+    height: fit-content;
     width: 100%;
     background-color: transparent;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Remove default list styling for li elements */
+li {
+    list-style: none;
+}
+
+/* Remove underline from anchor elements */
+a {
+    text-decoration: none;
+}
+
+/* Styling for the menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for each menu item */
+.menu-item {
+    margin-right: 1rem;
+}
+
+/* Styling for anchor elements within menu items */
+.menu-item > a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+/* Styling for the ::after pseudo-element */
+.menu-item > a::after {
+    content: '';
+    width: 0;
+    background-color: #77a805;
+    display: block;
+    height: 0.13rem;
+    transition: width .3s ease;
+}
+
+
+/* Styling for the ::after pseudo-element when hovered */
+.menu-item > a:hover::after {
+    width: 100%;
 }
 
 /* Logo img inside header */
-header img {
-    height: 25%;
+header > img {
+    height: 2rem;
+    width: auto;
     padding: 1rem 0 0 1rem;
 }
 

@@ -13,6 +13,12 @@ header {
     z-index: 100;
 }
 
+/* Logo img inside header */
+header img {
+    height: 25%;
+    padding: 1rem 0 0 1rem;
+}
+
 /* Style the 'home' section with background properties. */
 #home {
     position: relative;

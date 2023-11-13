@@ -60,6 +60,63 @@ a {
     width: 100%;
 }
 
+/* Styling for an interactive element */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Styling for active state of the 'hamRotate' class */
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+/* Styling for lines within the SVG */
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: white;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+
+/* Styling for the top line */
+.ham .top {
+    stroke-dasharray: 40 160;
+}
+
+/* Styling for the middle line */
+.ham .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+
+/* Styling for the bottom line */
+.ham .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+/* Styling for active state of individual lines */
+.ham.active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham.active .middle {
+    transform: rotate(90deg);
+}
+
+.ham.active .bottom {
+    stroke-dashoffset: -64px;
+}  
+
 /* Logo img inside header */
 header > img {
     height: 2rem;

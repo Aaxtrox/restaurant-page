@@ -125,6 +125,12 @@ function menuFactory(header) {
     } else {
         createHamburgerMenu(); // Create a hamburger menu
     }
+
+    // Check for active hamburger menu and window size
+    if (window.innerWidth >= 500 && document.querySelector('.menuHam.active')) {
+        // Remove the active hamburger menu
+        document.querySelector('.menuHam.active').classList.remove('active');
+    }
 }
 
 // Export the 'nav' function.

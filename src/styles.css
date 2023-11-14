@@ -62,6 +62,7 @@ a {
 
 /* Styling for an interactive element */
 .ham {
+    z-index: 2;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transition: transform 400ms;
@@ -83,6 +84,9 @@ a {
     stroke: white;
     stroke-width:5.5;
     stroke-linecap:round;
+}
+.line.active {
+    stroke: black;
 }
 
 /* Styling for the top line */
@@ -115,7 +119,26 @@ a {
 
 .ham.active .bottom {
     stroke-dashoffset: -64px;
-}  
+}
+
+.menuHam {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.menuHam.active {
+    transform: translate(0, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
 
 /* Logo img inside header */
 header > img {

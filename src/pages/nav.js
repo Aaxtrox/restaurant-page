@@ -81,6 +81,18 @@ function menuFactory(header) {
         svgElement.appendChild(pathBottom);
 
         header.appendChild(svgElement);
+
+        const menu = document.createElement('ul');
+        menu.classList.add('menuHam');
+        header.appendChild(menu);
+
+        svgElement.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            const lines = svgElement.querySelectorAll('.line');
+            lines.forEach((line) => {
+                line.classList.toggle('active');
+            });
+        });
     };
 
     if (window.innerWidth >= 500) {

@@ -333,6 +333,12 @@ h2 {
     }
 }
 
+#menu {
+    background: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {

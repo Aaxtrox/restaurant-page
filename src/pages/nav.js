@@ -60,6 +60,28 @@ function menuFactory(header) {
             link.innerHTML = item;
             menuItem.appendChild(link);
         });
+
+        // Check for the '#menu' element
+        if (document.querySelector('#menu')) {
+            // Select all elements with class 'menu-item'
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            // Loop through each 'menu-item' element
+            menuItems.forEach((item) => {
+                // Access the first child element of each 'menu-item' and change its text color to black
+                item.firstChild.style.color = 'black';
+            });
+        // Check for the '#home' element
+        } else if (document.querySelector('#home')) {
+            // Select all elements with class 'menu-item'
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            // Loop through each 'menu-item' element
+            menuItems.forEach((item) => {
+                // Access the first child element of each 'menu-item' and change its text color to white
+                item.firstChild.style.color = 'white';
+            });
+        }
     };
 
     // Creates a hamburger menu with SVG elements and functionality.

@@ -2,6 +2,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+/* Preloader background */
+#preloader {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: whitesmoke;
+    z-index: 5000; /* Ensure preloader is above other elements */
+}
+
+/* Text above spinner */
+#preloader > div:first-of-type {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Preloader spinner */
+#spinner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    margin: calc(-1 * 50px / 2);
+    border: 4px rgba(0, 0, 0, 0.25) solid;
+    border-top: 4px #77a805 solid;
+    border-radius: 50%;
+    animation: spinning 1s infinite linear;
+}
+
+/* Keyframe animation for spinner rotation */
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* Preloader spinner animation */
+.loader {
+    animation: spin 1s forwards;
+}
+
+/* Keyframe animation for spinner fade-out */
+@keyframes spin {
+    100% {
+        opacity: 0; /* Fade out the preloader */
+        visibility: hidden; /* Hide the preloader */
+    }
+}
+
 /* Styling for the header element */
 header {
     position: fixed;

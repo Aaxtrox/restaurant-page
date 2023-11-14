@@ -30,15 +30,20 @@ const nav = function () {
     });
 }
 
+// Creates a menu or hamburger menu based on the window width.
 function menuFactory(header) {
+    // Check for existing menu and hamburger elements
     const existingMenu = header.querySelector('ul.menu');
     const existingSVG = header.querySelector('svg.ham');
 
+    // Remove existing menu or hamburger elements if present
     if (existingMenu) {
         header.removeChild(existingMenu); // Remove the existing ul.menu
     } else if (existingSVG) {
         header.removeChild(existingSVG); // Remove the existing svg.ham
     }
+
+    // Creates a standard menu with list items and links.
     const createMenu = () => {
         const menu = document.createElement('ul');
         menu.classList.add('menu');
@@ -57,6 +62,7 @@ function menuFactory(header) {
         });
     };
 
+    // Creates a hamburger menu with SVG elements and functionality.
     const createHamburgerMenu = () => {
         const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svgElement.setAttribute("class", "ham hamRotate");
@@ -64,6 +70,7 @@ function menuFactory(header) {
         svgElement.setAttribute("width", "40");
         svgElement.setAttribute("onclick", "this.classList.toggle('active')");
 
+        // Creating paths for the hamburger lines
         const pathTop = document.createElementNS("http://www.w3.org/2000/svg", "path");
         pathTop.setAttribute("class", "line top");
         pathTop.setAttribute("d", "m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20");
@@ -76,16 +83,20 @@ function menuFactory(header) {
         pathBottom.setAttribute("class", "line bottom");
         pathBottom.setAttribute("d", "m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20");
 
+        // Appending paths to the SVG element
         svgElement.appendChild(pathTop);
         svgElement.appendChild(pathMiddle);
         svgElement.appendChild(pathBottom);
 
+        // Adding the SVG hamburger element to the header
         header.appendChild(svgElement);
 
+        // Creating a menu for the hamburger functionality
         const menu = document.createElement('ul');
         menu.classList.add('menuHam');
         header.appendChild(menu);
 
+        // Adding click event listener to toggle hamburger menu visibility
         svgElement.addEventListener('click', () => {
             menu.classList.toggle('active');
             const lines = svgElement.querySelectorAll('.line');
@@ -95,10 +106,11 @@ function menuFactory(header) {
         });
     };
 
+    // Check window size to determine which menu to create
     if (window.innerWidth >= 500) {
-        createMenu();
+        createMenu(); // Create a standard menu
     } else {
-        createHamburgerMenu();
+        createHamburgerMenu(); // Create a hamburger menu
     }
 }
 

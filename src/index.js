@@ -5,6 +5,7 @@ import './styles.css';     // Apply custom styles.
 // Import the 'preloader' and 'home' functions.
 import preloader from './pages/preloader';
 import home from './pages/home';
+import menu from './pages/menu';
 
 // Invoke the 'preloader' and 'home' functions.
 preloader();

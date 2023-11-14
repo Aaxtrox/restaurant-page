@@ -104,6 +104,19 @@ function menuFactory(header) {
                 line.classList.toggle('active');
             });
         });
+
+        // Add 3 li elements to the menuHam ul
+        const menuList = ['Home', 'Menu', 'Contact'];
+        menuList.forEach((item) => {
+            const menuItem = document.createElement('li');
+            menuItem.classList.add('menu-item-ham');
+            menu.appendChild(menuItem);
+
+            const link = document.createElement('a');
+            link.href = '#';
+            link.innerHTML = item;
+            menuItem.appendChild(link);
+        });
     };
 
     // Check window size to determine which menu to create

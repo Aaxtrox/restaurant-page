@@ -38,7 +38,8 @@ a {
 }
 
 /* Styling for anchor elements within menu items */
-.menu-item > a {
+.menu-item > a,
+.menu-item-ham > a {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
@@ -137,12 +138,32 @@ a {
     /* Transform properties */
     transform: translate(100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    /* Positioning for menu items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Styles when the hamburger menu is active */
 .menuHam.active {
     transform: translate(0, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for menu item within the hamburger menu */
+.menu-item-ham {
+    padding-top: 5rem;
+}
+
+/* Styles for anchor elements within the hamburger menu */
+.menu-item-ham > a {
+    color: black;
+    font-size: 4rem;
 }
 
 /* Logo img inside header */

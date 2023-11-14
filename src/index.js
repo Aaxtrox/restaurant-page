@@ -55,6 +55,15 @@ btnWrapper.addEventListener('click', () => {
     const home = document.querySelector('#home');
     content.removeChild(home);
 
+    // Select all elements with class 'menu-item'
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    // Loop through each 'menu-item' element
+    menuItems.forEach((item) => {
+        // Access the first child element of each 'menu-item' and change its text color to black
+        item.firstChild.style.color = 'black';
+    });
+
     // Call the 'menu' function
     menu();
 });

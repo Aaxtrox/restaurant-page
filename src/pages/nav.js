@@ -113,6 +113,28 @@ function menuFactory(header) {
         // Adding the SVG hamburger element to the header
         header.appendChild(svgElement);
 
+        // Check for the '#menu' element
+        if (document.querySelector('#menu')) {
+            // Select all elements with class 'line'
+            const lines = document.querySelectorAll('.line');
+
+            // Loop through each 'line' element
+            lines.forEach((line) => {
+                // Change the color of each 'line' element to black
+                line.style.stroke = 'black';
+            });
+        // Check for the '#home' element
+        } else if (document.querySelector('#home')) {
+            // Select all elements with class 'line'
+            const lines = document.querySelectorAll('.line');
+
+            // Loop through each 'line' element
+            lines.forEach((line) => {
+                // Change the color of each 'line' element to white
+                line.style.stroke = 'white';
+            });
+        }
+
         // Creating a menu for the hamburger functionality
         const menu = document.createElement('ul');
         menu.classList.add('menuHam');

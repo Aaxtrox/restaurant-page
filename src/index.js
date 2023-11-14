@@ -64,6 +64,15 @@ btnWrapper.addEventListener('click', () => {
         item.firstChild.style.color = 'black';
     });
 
+    // Select all elements with class 'ham > line'
+    const hamLines = document.querySelectorAll('.ham > .line');
+
+    // Loop through each 'ham > line' element
+    hamLines.forEach((line) => {
+        // Change the stroke color of each 'ham > line' element to black
+        line.style.stroke = 'black';
+    });
+
     // Call the 'menu' function
     menu();
 });

@@ -79,8 +79,10 @@ function click () {
     const menuHam = document.querySelector('.menuHam');
 
     // Remove the 'active' class from the 'svg.ham' and '.menuHam' elements
-    ham.classList.remove('active');
-    menuHam.classList.remove('active');
+    if (ham) {
+        ham.classList.remove('active');
+        menuHam.classList.remove('active');
+    }
 }
 
 // Export the 'linkFactory' functions

@@ -1,6 +1,9 @@
 // Import the 'background' image from the specified file path.
 import background from '../assets/background1.png';
 
+// Import the 'menu' function from the specified file path.
+import menu from './menu';
+
 // Define a function named 'home'.
 const home = function () {
     // Find the HTML element with the id 'content' and store it in the 'content' variable.
@@ -67,6 +70,41 @@ const home = function () {
     // Append the 'btn' element as a child to the 'btnWrapper' element
     btnWrapper.appendChild(btn);
 
+    // Add an event listener to the 'btn' element
+    btn.addEventListener('click', () => {
+        // Check if the last child of '#content' is not 'menu'
+        if (document.querySelector('#content').lastChild.id !== 'menu') {
+            // Remove the current last child of '#content'
+            document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
+
+
+            // Select all elements with class 'menu-item'
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            // Loop through each 'menu-item' element
+            menuItems.forEach((item) => {
+                // Access the first child element of each 'menu-item' and change its text color to black
+                item.firstChild.style.color = 'black';
+            });
+
+            // Select the 'ham' element
+            const ham = document.querySelector('.ham');
+
+            // Check if the 'ham' element exists
+            if (ham) {
+                const lanes = document.querySelectorAll('.line');
+
+                // Loop through each 'line' element
+                lanes.forEach((lane) => {
+                    // Change the color of each line to black
+                    lane.style.stroke = 'black';
+                });
+            }
+
+            // Call the 'menu' function to display the 'menu' section
+            menu();
+        }
+    });
 }
 
 // Export the 'home' function as the default export of this module.

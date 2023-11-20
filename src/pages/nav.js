@@ -21,12 +21,15 @@ const nav = function () {
     // Appending the image to the header
     header.appendChild(logoImg);
 
-    // Run the 'menuFactory' function and pass the 'header' element as an argument.
+    // Run the 'linkFactory' and 'menuFactory' function and pass the 'header' element as an argument.
     menuFactory(header);
+    linkFactory();
 
-    // Run the 'menuFactory' function when the window is resized.
+
+    // Run the 'linkFactory' and 'menuFactory' function when the window is resized.
     window.addEventListener('resize', () => {
         menuFactory(header);
+        linkFactory();
     });
 }
 
@@ -153,6 +156,24 @@ function menuFactory(header) {
         // Remove the active hamburger menu
         document.querySelector('.menuHam.active').classList.remove('active');
     }
+}
+
+function linkFactory() {
+    // grab all a elements
+    const links = document.querySelectorAll('a');
+    
+    // loop through each a element
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (link.innerHTML === 'Home') {
+                console.log('Home');
+            } else if (link.innerHTML === 'Menu') {
+                console.log('Menu');
+            } else if (link.innerHTML === 'Contact') {
+                console.log('Contact');
+            }
+        });
+    });
 }
 
 // Export the 'nav' function.

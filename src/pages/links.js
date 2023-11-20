@@ -55,15 +55,6 @@ function color () {
             // Set the color of the first child element's text to white
             item.firstChild.style.color = 'white';
         });
-
-        // Select all elements with the class 'line'
-        const lines = document.querySelectorAll('.line');
-
-        // Iterate through each 'line' element
-        lines.forEach((line) => {
-            // Set the color of each 'line' element to white
-            line.style.stroke = 'white';
-        });
     } else {
         // If '#home' does not exist, select all elements with the class 'menu-item'
         const menuItems = document.querySelectorAll('.menu-item');
@@ -72,15 +63,6 @@ function color () {
         menuItems.forEach((item) => {
             // Set the color of the first child element's text to black
             item.firstChild.style.color = 'black';
-        });
-
-        // Select all elements with the class 'line'
-        const lines = document.querySelectorAll('.line');
-
-        // Iterate through each 'line' element
-        lines.forEach((line) => {
-            // Set the color of each 'line' element to black
-            line.style.stroke = 'black';
         });
     }
 }

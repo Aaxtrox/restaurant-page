@@ -130,6 +130,16 @@ function menuFactory(header) {
             const lines = svgElement.querySelectorAll('.line');
             lines.forEach((line) => {
                 line.classList.toggle('active');
+                // if menuHam is active, change the color of the lines to black
+                if (menu.classList.contains('active')) {
+                    line.style.stroke = 'black';
+                } else if (!menu.classList.contains('active') && document.querySelector('#home')) {
+                    setTimeout(() => {
+                        line.style.stroke = 'white';
+                    }, 300);
+                } else if (!menu.classList.contains('active') && document.querySelector(!'#home')) {
+                    line.style.stroke = 'black';
+                }
             });
         });
 

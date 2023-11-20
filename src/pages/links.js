@@ -23,6 +23,9 @@ const linkFactory = function () {
 
                     // Call the 'color' function to change the text color of the menu items
                     color();
+
+                    // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
+                    click();
                 }
             } else if (link.innerHTML === 'Menu') {
                 // Check if the last child of '#content' is not 'menu'
@@ -35,6 +38,9 @@ const linkFactory = function () {
 
                     // Call the 'color' function to change the text color of the menu items
                     color();
+
+                    // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
+                    click();
                 }
             } else if (link.innerHTML === 'Contact') {
                 console.log('Contact');
@@ -65,6 +71,16 @@ function color () {
             item.firstChild.style.color = 'black';
         });
     }
+}
+
+function click () {
+    // Select the 'svg.ham' and '.menuHam' elements
+    const ham = document.querySelector('svg.ham');
+    const menuHam = document.querySelector('.menuHam');
+
+    // Remove the 'active' class from the 'svg.ham' and '.menuHam' elements
+    ham.classList.remove('active');
+    menuHam.classList.remove('active');
 }
 
 // Export the 'linkFactory' functions

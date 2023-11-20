@@ -1,11 +1,6 @@
 // Import the 'background' image from the specified file path.
 import background from '../assets/background1.png';
 
-// Import the 'nav' module and invoke its function
-import nav from './nav';
-// Execute the 'nav' function to handle navigation-related tasks
-nav();
-
 // Define a function named 'home'.
 const home = function () {
     // Find the HTML element with the id 'content' and store it in the 'content' variable.

@@ -1,6 +1,10 @@
 // Import the 'logo' image from the specified file path.
 import logo from '../assets/logo.png';
 
+// Import functions from other modules.
+import home from './home';
+import menu from './menu';
+
 // Define a function named 'nav'.
 const nav = function () {
     // Find the HTML element with the id 'content' and store it in the 'content' variable.
@@ -158,17 +162,34 @@ function menuFactory(header) {
     }
 }
 
+// Creates links for the menu items.
 function linkFactory() {
-    // grab all a elements
+    // Select all anchor elements on the page
     const links = document.querySelectorAll('a');
     
-    // loop through each a element
+    // Iterate through each anchor element
     links.forEach((link) => {
+        // Add a click event listener to each anchor
         link.addEventListener('click', () => {
+            // Check if the clicked anchor is 'Home' or 'Menu' or 'Contact'
             if (link.innerHTML === 'Home') {
-                console.log('Home');
+                // Check if the last child of '#content' is not 'home'
+                if (document.querySelector('#content').lastChild.id !== 'home') {
+                    // Remove the current last child of '#content'
+                    document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
+                    
+                    // Call the 'home' function to display the 'home' section
+                    home();
+                }
             } else if (link.innerHTML === 'Menu') {
-                console.log('Menu');
+                // Check if the last child of '#content' is not 'menu'
+                if (document.querySelector('#content').lastChild.id !== 'menu') {
+                    // Remove the current last child of '#content'
+                    document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
+
+                    // Call the 'menu' function to display the 'menu' section
+                    menu();
+                }
             } else if (link.innerHTML === 'Contact') {
                 console.log('Contact');
             }

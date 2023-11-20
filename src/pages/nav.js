@@ -164,6 +164,28 @@ function menuFactory(header) {
             link.innerHTML = item;
             menuItem.appendChild(link);
         });
+
+        // Check for the '#menu' element
+        if (document.querySelector('#menu')) {
+            // Select all elements with class 'menu-item-ham'
+            const lanes = document.querySelectorAll('.line');
+
+            // Loop through each 'line' element
+            lanes.forEach((lane) => {
+                // Change the color of each line to black
+                lane.style.stroke = 'black';
+            });
+        // Check for the '#home' element
+        } else if (document.querySelector('#home')) {
+            // Select all elements with class 'line'
+            const lanes = document.querySelectorAll('.line');
+
+            // Loop through each 'line' element
+            lanes.forEach((lane) => {
+                // Change the color of each line to white
+                lane.style.stroke = 'white';
+            });
+        }
     };
 
     // Check window size to determine which menu to create

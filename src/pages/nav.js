@@ -180,6 +180,9 @@ function linkFactory() {
                     
                     // Call the 'home' function to display the 'home' section
                     home();
+
+                    // Call the 'color' function to change the text color of the menu items
+                    color();
                 }
             } else if (link.innerHTML === 'Menu') {
                 // Check if the last child of '#content' is not 'menu'
@@ -189,12 +192,39 @@ function linkFactory() {
 
                     // Call the 'menu' function to display the 'menu' section
                     menu();
+
+                    // Call the 'color' function to change the text color of the menu items
+                    color();
                 }
             } else if (link.innerHTML === 'Contact') {
                 console.log('Contact');
             }
         });
     });
+}
+
+// Changes the text color of the menu items.
+function color () {
+    // Check if an element with ID 'home' exists in the document
+    if (document.querySelector('#home')) {
+        // If '#home' exists, select all elements with the class 'menu-item'
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Iterate through each 'menu-item' element
+        menuItems.forEach((item) => {
+            // Set the color of the first child element's text to white
+            item.firstChild.style.color = 'white';
+        });
+    } else {
+        // If '#home' does not exist, select all elements with the class 'menu-item'
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        // Iterate through each 'menu-item' element
+        menuItems.forEach((item) => {
+            // Set the color of the first child element's text to black
+            item.firstChild.style.color = 'black';
+        });
+    }
 }
 
 // Export the 'nav' function.

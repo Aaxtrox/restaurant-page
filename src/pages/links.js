@@ -1,6 +1,7 @@
 // Import functions from other modules.
 import home from './home';
 import menu from './menu';
+import about from './about';
 
 // Creates links for the menu items.
 const linkFactory = function () {
@@ -43,7 +44,20 @@ const linkFactory = function () {
                     click();
                 }
             } else if (link.innerHTML === 'Contact') {
-                console.log('Contact');
+                // Check if the last child of '#content' is not 'about'
+                if (document.querySelector('#content').lastChild.id !== 'about') {
+                    // Remove the current last child of '#content'
+                    document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
+
+                    // Call the 'about' function to display the 'about' section
+                    about();
+
+                    // Call the 'color' function to change the text color of the menu items
+                    color();
+
+                    // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
+                    click();
+                }
             }
         });
     });

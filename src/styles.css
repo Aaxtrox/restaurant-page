@@ -148,9 +148,6 @@ a {
     stroke-width:5.5;
     stroke-linecap:round;
 }
-.line.active {
-    stroke: black;
-}
 
 /* Styling for the top line */
 .ham .top {

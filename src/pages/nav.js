@@ -51,6 +51,15 @@ function menuFactory(header) {
 
     // Creates a standard menu with list items and links.
     const createMenu = () => {
+        // Check for existing hamburger menu elements
+        if (document.querySelector('.menuHam')) {
+            // Select all elements with class 'menuHam'
+            const menuHam = document.querySelectorAll('.menuHam');
+            menuHam.forEach((item) => {
+                // Remove each 'menuHam' element
+                header.removeChild(item);
+            });
+        }
         const menu = document.createElement('ul');
         menu.classList.add('menu');
         header.appendChild(menu);

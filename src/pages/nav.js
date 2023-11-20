@@ -165,6 +165,26 @@ function menuFactory(header) {
             menuItem.appendChild(link);
         });
 
+        // Select all elements
+        const links = document.querySelectorAll('a');
+        const lanes = document.querySelectorAll('.line');
+
+        // Add click event listener to each link
+        links.forEach((link) => {
+            // Add click event listener to each link
+            link.addEventListener('click', () => {
+                // Check if the clicked anchor is 'Home'
+                if (link.innerHTML === 'Home' && document.querySelector('#content').lastChild.id !== 'home') {
+                    lanes.forEach((lane) => {
+                        // Change the color of each line to white, after 300ms
+                        setTimeout(() => {
+                            lane.style.stroke = 'white';
+                        }, 300);
+                    });
+                }
+            });
+        });
+
         // Check for the '#menu' element
         if (document.querySelector('#menu')) {
             // Select all elements with class 'menu-item-ham'

@@ -3,6 +3,7 @@ import background from '../assets/background1.png';
 
 // Import the 'menu' function from the specified file path.
 import menu from './menu';
+import menuStyles from './menuStyles';
 
 // Define a function named 'home'.
 const home = function () {
@@ -72,38 +73,14 @@ const home = function () {
 
     // Add an event listener to the 'btn' element
     btn.addEventListener('click', () => {
-        // Check if the last child of '#content' is not 'menu'
-        if (document.querySelector('#content').lastChild.id !== 'menu') {
-            // Remove the current last child of '#content'
-            document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
+        // Remove the current last child of '#content'
+        document.querySelector('#content').removeChild(document.querySelector('#content').lastChild);
 
+        // Call the 'menuStyles' function to display the 'menu' section
+        menuStyles();
 
-            // Select all elements with class 'menu-item'
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            // Loop through each 'menu-item' element
-            menuItems.forEach((item) => {
-                // Access the first child element of each 'menu-item' and change its text color to black
-                item.firstChild.style.color = 'black';
-            });
-
-            // Select the 'ham' element
-            const ham = document.querySelector('.ham');
-
-            // Check if the 'ham' element exists
-            if (ham) {
-                const lanes = document.querySelectorAll('.line');
-
-                // Loop through each 'line' element
-                lanes.forEach((lane) => {
-                    // Change the color of each line to black
-                    lane.style.stroke = 'black';
-                });
-            }
-
-            // Call the 'menu' function to display the 'menu' section
-            menu();
-        }
+        // Call the 'menu' function to display the 'menu' section
+        menu();
     });
 }
 

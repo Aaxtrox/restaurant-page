@@ -75,28 +75,6 @@ function menuFactory(header) {
             link.innerHTML = item;
             menuItem.appendChild(link);
         });
-
-        // Check for the '#menu' element
-        if (document.querySelector('#menu')) {
-            // Select all elements with class 'menu-item'
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            // Loop through each 'menu-item' element
-            menuItems.forEach((item) => {
-                // Access the first child element of each 'menu-item' and change its text color to black
-                item.firstChild.style.color = 'black';
-            });
-        // Check for the '#home' element
-        } else if (document.querySelector('#home')) {
-            // Select all elements with class 'menu-item'
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            // Loop through each 'menu-item' element
-            menuItems.forEach((item) => {
-                // Access the first child element of each 'menu-item' and change its text color to white
-                item.firstChild.style.color = 'white';
-            });
-        }
     };
 
     // Creates a hamburger menu with SVG elements and functionality.
@@ -133,25 +111,6 @@ function menuFactory(header) {
         menu.classList.add('menuHam');
         header.appendChild(menu);
 
-        // Adding click event listener to toggle hamburger menu visibility
-        svgElement.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            const lines = svgElement.querySelectorAll('.line');
-            lines.forEach((line) => {
-                line.classList.toggle('active');
-                // if menuHam is active, change the color of the lines to black
-                if (menu.classList.contains('active')) {
-                    line.style.stroke = 'black';
-                } else if (!menu.classList.contains('active') && document.querySelector('#home')) {
-                    setTimeout(() => {
-                        line.style.stroke = 'white';
-                    }, 300);
-                } else if (!menu.classList.contains('active') && document.querySelector(!'#home')) {
-                    line.style.stroke = 'black';
-                }
-            });
-        });
-
         // Add 3 li elements to the menuHam ul
         const menuList = ['Home', 'Menu', 'Contact'];
         menuList.forEach((item) => {
@@ -165,47 +124,14 @@ function menuFactory(header) {
             menuItem.appendChild(link);
         });
 
-        // Select all elements
-        const links = document.querySelectorAll('a');
-        const lanes = document.querySelectorAll('.line');
+        // Add click event listener to svg.ham
+        svgElement.addEventListener('click', () => {
+            // Select element with class 'menuHam'
+            const menuHam = document.querySelector('.menuHam');
 
-        // Add click event listener to each link
-        links.forEach((link) => {
-            // Add click event listener to each link
-            link.addEventListener('click', () => {
-                // Check if the clicked anchor is 'Home'
-                if (link.innerHTML === 'Home' && document.querySelector('#content').lastChild.id !== 'home') {
-                    lanes.forEach((lane) => {
-                        // Change the color of each line to white, after 300ms
-                        setTimeout(() => {
-                            lane.style.stroke = 'white';
-                        }, 300);
-                    });
-                }
-            });
+            // Toggle the 'active' class on the 'menuHam' element
+            menuHam.classList.toggle('active');
         });
-
-        // Check for the '#menu' element
-        if (document.querySelector('#menu')) {
-            // Select all elements with class 'menu-item-ham'
-            const lanes = document.querySelectorAll('.line');
-
-            // Loop through each 'line' element
-            lanes.forEach((lane) => {
-                // Change the color of each line to black
-                lane.style.stroke = 'black';
-            });
-        // Check for the '#home' element
-        } else if (document.querySelector('#home')) {
-            // Select all elements with class 'line'
-            const lanes = document.querySelectorAll('.line');
-
-            // Loop through each 'line' element
-            lanes.forEach((lane) => {
-                // Change the color of each line to white
-                lane.style.stroke = 'white';
-            });
-        }
     };
 
     // Check window size to determine which menu to create

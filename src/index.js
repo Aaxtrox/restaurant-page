@@ -5,9 +5,11 @@ import './styles.css';     // Apply custom styles.
 // Import functions from other modules.
 import preloader from './pages/preloader';
 import nav from './pages/nav';
+import menuStyles from './pages/menuStyles';
 import home from './pages/home';
 
 // Invoke the 'preloader' and 'home' functions.
 preloader();
 nav();
 home();
+menuStyles();

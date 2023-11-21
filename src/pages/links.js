@@ -22,9 +22,6 @@ const linkFactory = function () {
                     // Call the 'home' function to display the 'home' section
                     home();
 
-                    // Call the 'color' function to change the text color of the menu items
-                    color();
-
                     // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
                     click();
                 }
@@ -36,9 +33,6 @@ const linkFactory = function () {
 
                     // Call the 'menu' function to display the 'menu' section
                     menu();
-
-                    // Call the 'color' function to change the text color of the menu items
-                    color();
 
                     // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
                     click();
@@ -52,41 +46,15 @@ const linkFactory = function () {
                     // Call the 'about' function to display the 'about' section
                     about();
 
-                    // Call the 'color' function to change the text color of the menu items
-                    color();
-
                     // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
                     click();
                 }
             }
         });
     });
-}
+};
 
-// Changes the text color of the menu items.
-function color () {
-    // Check if an element with ID 'home' exists in the document
-    if (document.querySelector('#home')) {
-        // If '#home' exists, select all elements with the class 'menu-item'
-        const menuItems = document.querySelectorAll('.menu-item');
-
-        // Iterate through each 'menu-item' element
-        menuItems.forEach((item) => {
-            // Set the color of the first child element's text to white
-            item.firstChild.style.color = 'white';
-        });
-    } else {
-        // If '#home' does not exist, select all elements with the class 'menu-item'
-        const menuItems = document.querySelectorAll('.menu-item');
-
-        // Iterate through each 'menu-item' element
-        menuItems.forEach((item) => {
-            // Set the color of the first child element's text to black
-            item.firstChild.style.color = 'black';
-        });
-    }
-}
-
+// Hide hamburger menu when a menu item is clicked.
 function click () {
     // Select the 'svg.ham' and '.menuHam' elements
     const ham = document.querySelector('svg.ham');

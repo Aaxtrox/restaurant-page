@@ -50,10 +50,12 @@ const menuStyles = function () {
         });
     });
 
-    if (menuHam.classList.contains('active')) {
-        lines.forEach((line) => {
-            line.style.stroke = 'black';
-        });
+    if (menuHam) {
+        if (menuHam.classList.contains('active')) {
+            lines.forEach((line) => {
+                line.style.stroke = 'black';
+            });
+        }
     }
 }
 

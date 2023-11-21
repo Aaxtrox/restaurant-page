@@ -3,6 +3,7 @@ import logo from '../assets/logo.png';
 
 // Import the 'linkFactory' function from the specified file path.
 import linkFactory from './links';
+import menuStyles from './menuStyles';
 
 // Define a function named 'nav'.
 const nav = function () {
@@ -131,6 +132,8 @@ function menuFactory(header) {
 
             // Toggle the 'active' class on the 'menuHam' element
             menuHam.classList.toggle('active');
+
+            menuStyles();
         });
     };
 

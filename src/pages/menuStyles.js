@@ -49,6 +49,12 @@ const menuStyles = function () {
             subtree: true
         });
     });
+
+    if (menuHam.classList.contains('active')) {
+        lines.forEach((line) => {
+            line.style.stroke = 'black';
+        });
+    }
 }
 
 

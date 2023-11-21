@@ -19,9 +19,11 @@ const menuStyles = function () {
                         link.style.color = 'white';
                     });
                     if (ham) {
-                        lines.forEach((line) => {
-                            line.style.stroke = 'white';
-                        });
+                        setTimeout(() => {
+                            lines.forEach((line) => {
+                                line.style.stroke = 'white';
+                            });
+                        }, 300);
                         links.forEach((link) => {
                             link.style.color = 'black';
                         });

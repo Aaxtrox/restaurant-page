@@ -25,52 +25,17 @@ const nav = function () {
     // Appending the image to the header
     header.appendChild(logoImg);
 
-    // Run the 'linkFactory' and 'menuFactory' function and pass the 'header' element as an argument.
-    menuFactory(header);
-    linkFactory();
-
-
-    // Run the 'linkFactory' and 'menuFactory' function when the window is resized.
-    window.addEventListener('resize', () => {
-        menuFactory(header);
-        linkFactory();
-    });
-}
-
-// Creates a menu or hamburger menu based on the window width.
-function menuFactory(header) {
-    // Check for existing menu and hamburger elements
-    const existingMenu = header.querySelector('ul.menu');
-    const existingSVG = header.querySelector('svg.ham');
-
-    // Remove existing menu or hamburger elements if present
-    if (existingMenu) {
-        header.removeChild(existingMenu); // Remove the existing ul.menu
-    } else if (existingSVG) {
-        header.removeChild(existingSVG); // Remove the existing svg.ham
-    }
-
-    // Creates a standard menu with list items and links.
     const createMenu = () => {
-        // Check for existing hamburger menu elements
-        if (document.querySelector('.menuHam')) {
-            // Select all elements with class 'menuHam'
-            const menuHam = document.querySelectorAll('.menuHam');
-            menuHam.forEach((item) => {
-                // Remove each 'menuHam' element
-                header.removeChild(item);
-            });
-        }
         const menu = document.createElement('ul');
         menu.classList.add('menu');
         header.appendChild(menu);
-
+    
         const menuList = ['Home', 'Menu', 'Contact'];
         menuList.forEach((item) => {
             const menuItem = document.createElement('li');
             menuItem.classList.add('menu-item');
             menu.appendChild(menuItem);
-
+    
             const link = document.createElement('a');
             link.href = '#';
             link.innerHTML = item;
@@ -78,7 +43,6 @@ function menuFactory(header) {
         });
     };
 
-    // Creates a hamburger menu with SVG elements and functionality.
     const createHamburgerMenu = () => {
         const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svgElement.setAttribute("class", "ham hamRotate");
@@ -137,19 +101,10 @@ function menuFactory(header) {
         });
     };
 
-    // Check window size to determine which menu to create
-    if (window.innerWidth >= 500) {
-        createMenu(); // Create a standard menu
-    } else {
-        createHamburgerMenu(); // Create a hamburger menu
-    }
-
-    // Check for active hamburger menu and window size
-    if (window.innerWidth >= 500 && document.querySelector('.menuHam.active')) {
-        // Remove the active hamburger menu
-        document.querySelector('.menuHam.active').classList.remove('active');
-    }
-}
+    createMenu();
+    createHamburgerMenu();
+    linkFactory();
+};
 
 // Export the 'nav' function.
 export default nav;

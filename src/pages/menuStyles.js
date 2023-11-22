@@ -25,7 +25,7 @@ const menuStyles = function () {
                             });
                         }, 300);
                         links.forEach((link) => {
-                            link.style.color = 'black';
+                            link.style.color = 'white';
                         });
                     }
                 } else if (node.id === 'menu' || node.id === 'about') {

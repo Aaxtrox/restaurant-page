@@ -125,6 +125,7 @@ a {
 
 /* Styling for an interactive element */
 .ham {
+    display: none;
     z-index: 2;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -366,5 +367,11 @@ h2 {
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .menu {
+        display: none;
+    }
+    .ham {
+        display: block;
     }
 }

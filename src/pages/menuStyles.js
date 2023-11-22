@@ -4,7 +4,7 @@ const menuStyles = function () {
     const about = document.querySelector('#about');
 
     const menuHam = document.querySelector('.menuHam');
-    const links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('.menu-item > a');
     const ham = document.querySelector('.ham');
     const lines = document.querySelectorAll('.line');
 

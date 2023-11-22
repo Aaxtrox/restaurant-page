@@ -1,3 +1,5 @@
+import { set } from "lodash";
+
 const menuStyles = function () {
     const home = document.querySelector('#home');
     const menu = document.querySelector('#menu');
@@ -54,6 +56,12 @@ const menuStyles = function () {
         if (menuHam.classList.contains('active')) {
             lines.forEach((line) => {
                 line.style.stroke = 'black';
+            });
+        } else if (!menuHam.classList.contains('active') && home) {
+            lines.forEach((line) => {
+                setTimeout(() => {
+                    line.style.stroke = 'white';
+                }, 300);
             });
         }
     }

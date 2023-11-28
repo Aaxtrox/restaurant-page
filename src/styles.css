@@ -343,6 +343,59 @@ h2 {
     height: 100vh;
 }
 
+/* Styling for the 'carousel' section */
+.carousel {
+    padding-top: 5rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-menu-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.carousel-menu-item.active {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 10px 20px 10px;
+}
+
+.arrows {
+    padding-top: 5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.arrow {
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {

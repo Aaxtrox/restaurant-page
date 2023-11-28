@@ -39,6 +39,20 @@ const menu = function () {
 
     // Add class active to the second 'carousel-menu-item' div element
     carouselMenuItems[1].classList.add('active');
+
+    // Create a 'arrow' div element
+    const arrowPrev = document.createElement('div');
+    arrowPrev.classList = 'arrow prev'; // Set the classList of the arrow div
+    arrows.appendChild(arrowPrev); // Append the arrow to the 'arrows' element
+
+    // Create a 'arrow' div element
+    const arrowNext = document.createElement('div');
+    arrowNext.classList = 'arrow next'; // Set the classList of the arrow div
+    arrows.appendChild(arrowNext); // Append the arrow to the 'arrows' element
+
+    // Add &lt; and &gt; to the 'arrow' div elements
+    arrowPrev.innerHTML = '&lt;';
+    arrowNext.innerHTML = '&gt;';
 }
 
 // Export the 'menu' function

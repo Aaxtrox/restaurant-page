@@ -38,7 +38,7 @@ const menu = function () {
     carouselMenuItems[0].innerText = 'Starters';
     carouselMenuItems[1].innerText = 'Burgers';
     carouselMenuItems[2].innerText = 'Kids Meals';
-    carouselMenuItems[3].innerText = 'Side Orders';
+    carouselMenuItems[3].innerText = 'Sides';
 
     // Add class active to the second 'carousel-menu-item' div element
     carouselMenuItems[1].classList.add('active');

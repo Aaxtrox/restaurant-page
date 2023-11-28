@@ -7,6 +7,38 @@ const menu = function () {
     const menu = document.createElement('div');
     menu.id = 'menu'; // Set the ID of the menu div
     content.appendChild(menu); // Append the menu to the 'content' element
+
+    // Create a 'carousel' div element
+    const carousel = document.createElement('div');
+    carousel.classList = 'carousel'; // Set the classList of the carousel div
+    menu.appendChild(carousel); // Append the carousel to the 'menu' element
+
+    // Create a 'menu-carousel' div element
+    const menuCarousel = document.createElement('div');
+    menuCarousel.classList = 'menu-carousel'; // Set the classList of the menu-carousel div
+    carousel.appendChild(menuCarousel); // Append the menu-carousel to the 'carousel' element
+
+    // Create a 'arrows' div element
+    const arrows = document.createElement('div');
+    arrows.classList = 'arrows'; // Set the classList of the arrows div
+    carousel.appendChild(arrows); // Append the arrows to the 'carousel' element
+
+    // Create a 'carousel-menu-item' div element
+    for (let i = 0; i < 4; i++) {
+        const carouselMenuItem = document.createElement('div');
+        carouselMenuItem.classList.add('carousel-menu-item'); // Add the class carousel-menu-item to the div
+        menuCarousel.appendChild(carouselMenuItem); // Append the carousel-menu-item to the 'menu-carousel' element
+    }
+
+    // Add inner text to the 'carousel-menu-item' div elements
+    const carouselMenuItems = document.querySelectorAll('.carousel-menu-item');
+    carouselMenuItems[0].innerText = 'Starters';
+    carouselMenuItems[1].innerText = 'Burgers';
+    carouselMenuItems[2].innerText = 'Kids Meals';
+    carouselMenuItems[3].innerText = 'Side Orders';
+
+    // Add class active to the second 'carousel-menu-item' div element
+    carouselMenuItems[1].classList.add('active');
 }
 
 // Export the 'menu' function

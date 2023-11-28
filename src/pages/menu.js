@@ -1,3 +1,6 @@
+// Import the carouselMenu function from the carouselMenu.js file
+import carouselMenu from './carousel/carouselMenu';
+
 // Function to create a menu element
 const menu = function () {
     // Get the 'content' element from the DOM
@@ -53,6 +56,13 @@ const menu = function () {
     // Add &lt; and &gt; to the 'arrow' div elements
     arrowPrev.innerHTML = '&lt;';
     arrowNext.innerHTML = '&gt;';
+
+    // Call the carouselMenu function to animate the carousel
+    carouselMenu();
+
+    window.addEventListener('resize', () => {
+        carouselMenu();
+    });
 }
 
 // Export the 'menu' function

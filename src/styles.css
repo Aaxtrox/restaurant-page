@@ -402,7 +402,8 @@ h2 {
 
 .menu-burgers,
 .menu-kids,
-.menu-sides {
+.menu-sides,
+.menu-starters {
     padding: 5rem 2rem 0 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -411,7 +412,8 @@ h2 {
 
 .burger img,
 .kids img,
-.sides img {
+.sides img,
+.starters img {
     width: 100%;
     height: auto;
 }

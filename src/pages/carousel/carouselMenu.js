@@ -60,7 +60,7 @@ const carouselMenu = function () {
   
     nextArrow.addEventListener('click', goToNext);
     prevArrow.addEventListener('click', goToPrev);
-  
+    
     updateMenu();
 };
 

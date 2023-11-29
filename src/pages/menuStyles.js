@@ -17,7 +17,6 @@ const menuStyles = function () {
             mutation.addedNodes.forEach((node) => {       
                 if (node.id === 'home') {
                     links.forEach((link) => {
-                        console.log('home');
                         link.style.color = 'white';
                     });
                     if (ham) {
@@ -31,7 +30,6 @@ const menuStyles = function () {
                         });
                     }
                 } else if (node.id === 'menu' || node.id === 'about') {
-                    console.log(mutation.target.id);
                     links.forEach((link) => {
                         link.style.color = 'black';
                     });

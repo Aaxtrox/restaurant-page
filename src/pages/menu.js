@@ -1,5 +1,6 @@
-// Import the carouselMenu function from the carouselMenu.js file
+// Import functions from other modules.
 import carouselMenu from './carousel/carouselMenu';
+import carouselMenuCard from './carousel/carouselMenuCard';
 
 // Function to create a menu element
 const menu = function () {
@@ -63,6 +64,9 @@ const menu = function () {
     window.addEventListener('resize', () => {
         carouselMenu();
     });
+
+    // Call the carouselMenuCard
+    carouselMenuCard();
 }
 
 // Export the 'menu' function

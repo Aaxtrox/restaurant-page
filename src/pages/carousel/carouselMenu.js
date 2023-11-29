@@ -45,7 +45,7 @@ const carouselMenu = function () {
     }
   
     function goToNext() {
-        if (currentIndex < menuItems.length - 1) {
+        if (currentIndex < menuItems.length -1) {
             currentIndex++;
             updateMenu();
         }

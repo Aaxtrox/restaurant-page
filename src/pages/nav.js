@@ -7,14 +7,17 @@ import menuStyles from './menuStyles';
 
 // Define a function named 'nav'.
 const nav = function () {
-    // Find the HTML element with the id 'content' and store it in the 'content' variable.
-    const content = document.querySelector('#content');
+    // Get the 'body' element from the DOM.
+    const body = document.querySelector('body');
 
     // Create a new html tag header element and store it in the 'header' variable.
     const header = document.createElement('header');
 
-    // Append the 'header' element as a child to the 'content' element.
-    content.appendChild(header);
+    // Append the 'header' element as a child to the 'body' element.
+    body.appendChild(header);
+
+    // Move the 'header' element to the top of the 'body' element.
+    body.insertBefore(header, body.firstChild);
 
     // Creating an image element
     const logoImg = document.createElement('img');

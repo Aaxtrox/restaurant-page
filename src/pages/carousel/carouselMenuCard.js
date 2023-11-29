@@ -1,3 +1,5 @@
+import menuBurgers from "../menu/burgers";
+
 const carouselMenuCard = function () {
     const menuCarousel = document.querySelector('.menu-carousel');
 
@@ -22,6 +24,8 @@ function burgers () {
     const menuDiv = document.createElement('div');
     menuDiv.classList.add('menu-burgers');
     menu.appendChild(menuDiv);
+
+    menuBurgers();
 }
 
 function starters () {

@@ -400,6 +400,17 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.menu-burgers {
+    padding: 5rem 2rem 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 4rem;
+}
+
+.burger img {
+    width: 100%;
+    height: auto;
+}
 /* Media Queries */
 @media (max-width: 1200px) {
     html {

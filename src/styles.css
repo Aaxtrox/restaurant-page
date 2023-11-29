@@ -331,12 +331,14 @@ h2 {
     }
 }
 
+/* Styling for the 'menu' section */
 #menu {
     background: whitesmoke;
     width: 100vw;
     height: 100vh;
 }
 
+/* Styling for the 'about' section */
 #about {
     background: whitesmoke;
     width: 100vw;
@@ -345,7 +347,8 @@ h2 {
 
 /* Styling for the 'carousel' section */
 .carousel {
-    padding-top: 5rem;
+    padding-top: 6rem;
+    font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -362,7 +365,7 @@ h2 {
     flex: 1;
     text-align: center;
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 0.635rem;
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 0.7;
@@ -371,7 +374,7 @@ h2 {
 .carousel-menu-item.active {
     font-weight: bold;
     font-size: 1.7rem;
-    padding: 0 10px 20px 10px;
+    padding: 0 0.635rem 1.25rem 0.635rem;
 }
 
 .arrows {
@@ -388,7 +391,7 @@ h2 {
 .arrow {
     pointer-events: auto;
     cursor: pointer;
-    padding: 10px;
+    padding: 0.635rem;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
 }
@@ -423,9 +426,6 @@ h2 {
 }
 
 @media (max-width: 500px) {
-    html {
-        font-size: 50%;
-    }
     #hero-text {
         top: 30%;
         left: 50%;

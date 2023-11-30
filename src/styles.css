@@ -343,6 +343,15 @@ h2 {
     background: whitesmoke;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about img {
+    width: 30rem;
+    height: auto;
 }
 
 /* Styling for the 'carousel' section */

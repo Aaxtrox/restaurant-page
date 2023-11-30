@@ -37,7 +37,7 @@ const linkFactory = function () {
                     // Call the 'click' function to remove the 'active' class from the 'svg.ham' and '.menuHam' elements
                     click();
                 }
-            } else if (link.innerHTML === 'Contact') {
+            } else if (link.innerHTML === 'About') {
                 // Check if the last child of '#content' is not 'about'
                 if (document.querySelector('#content').lastChild.id !== 'about') {
                     // Remove the current last child of '#content'

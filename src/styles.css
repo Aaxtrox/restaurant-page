@@ -421,7 +421,8 @@ h2 {
 
 /* Styling for text under menu food images */
 .kids,
-.burger {
+.burger,
+.sides {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -429,7 +430,8 @@ h2 {
 }
 
 .burger p,
-.kids p {
+.kids p,
+.sides p {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;

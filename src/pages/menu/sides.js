@@ -16,6 +16,16 @@ const sideMenuItems = [
     { imageSrc: Sweet_Potato_Fries }
 ];
 
+// Array of side menu item names
+const sideMenuNames = [
+    'Coleslaw',
+    'French Fries',
+    'Loaded Tater Tots',
+    'Onion Rings',
+    'Side Salad',
+    'Sweet Potato Fries'
+];
+
 // Function to create the sides menu
 const createSidesMenu = () => {
     // Selecting the container for the sides menu
@@ -34,6 +44,12 @@ const createSidesMenu = () => {
             const sidesImg = document.createElement('img');
             sidesImg.src = sideMenuItems[i].imageSrc; // Set image source based on the array
             sides.appendChild(sidesImg); // Append the image to the corresponding div
+
+            // Add side menu item name
+            const sidesName = document.createElement('p');
+            sidesName.classList.add('sides-name');
+            sidesName.innerHTML = sideMenuNames[i];
+            sides.appendChild(sidesName);
         }
     }
 };

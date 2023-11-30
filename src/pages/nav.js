@@ -1,7 +1,7 @@
 // Import the 'logo' image from the specified file path.
 import logo from '../assets/logo.png';
 
-// Import the 'linkFactory' function from the specified file path.
+// Import functions from other modules.
 import linkFactory from './links';
 import menuStyles from './menuStyles';
 
@@ -28,17 +28,24 @@ const nav = function () {
     // Appending the image to the header
     header.appendChild(logoImg);
 
+    // Creating a menu
     const createMenu = () => {
+        // Creating a menu for the header
         const menu = document.createElement('ul');
         menu.classList.add('menu');
         header.appendChild(menu);
-    
+        
+        // Add 3 li elements to the menu ul
         const menuList = ['Home', 'Menu', 'Contact'];
+
+        // Loop through the menuList array
         menuList.forEach((item) => {
+            // Create a li element
             const menuItem = document.createElement('li');
             menuItem.classList.add('menu-item');
             menu.appendChild(menuItem);
     
+            // Create a link element
             const link = document.createElement('a');
             link.href = '#';
             link.innerHTML = item;
@@ -46,7 +53,9 @@ const nav = function () {
         });
     };
 
+    // Creating a hamburger menu
     const createHamburgerMenu = () => {
+        // Creating an SVG element
         const svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svgElement.setAttribute("class", "ham hamRotate");
         svgElement.setAttribute("viewBox", "0 0 100 100");
@@ -104,6 +113,7 @@ const nav = function () {
         });
     };
 
+    // Invoke functions
     createMenu();
     createHamburgerMenu();
     linkFactory();

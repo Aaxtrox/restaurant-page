@@ -420,7 +420,16 @@ h2 {
 }
 
 /* Styling for text under menu food images */
-.burger p {
+.kids,
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger p,
+.kids p {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;

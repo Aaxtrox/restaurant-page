@@ -12,6 +12,14 @@ const kidsMenuItems = [
     { imageSrc: Mini_Corn_Dogs }
 ];
 
+// Array of kids menu item names
+const kidsMenuNames = [
+    'Chicken Tenders',
+    'Grilled Cheese Sandwich',
+    'Mini Cheeseburger',
+    'Mini Corn Dogs'
+];
+
 // Function to create the kids menu
 const createKidsMenu = () => {
     // Selecting the container for the kids menu
@@ -30,6 +38,12 @@ const createKidsMenu = () => {
             const kidsImg = document.createElement('img');
             kidsImg.src = kidsMenuItems[i].imageSrc; // Set image source based on the array
             kids.appendChild(kidsImg); // Append the image to the corresponding div
+
+            // Add kids menu item name
+            const kidsName = document.createElement('p');
+            kidsName.classList.add('kids-name');
+            kidsName.innerHTML = kidsMenuNames[i];
+            kids.appendChild(kidsName);
         }
     }
 };

@@ -1,3 +1,4 @@
+// Importing images for starter menu items
 import Bruschetta_Slices_of_toasted_baguette from '../../assets/starters/Bruschetta_Slices_of_toasted_baguette.png';
 import Chicken_Wings from '../../assets/starters/Chicken_Wings.png';
 import Fried_Pickles_Crispy_breaded_pickle_chips from '../../assets/starters/Fried_Pickles_Crispy_breaded_pickle_chips.png';
@@ -5,46 +6,36 @@ import Loaded_Nachos from '../../assets/starters/Loaded_Nachos.png';
 import Mozzarella_Sticks from '../../assets/starters/Mozzarella_Sticks.png';
 import Spinach_and_Artichoke_Dip from '../../assets/starters/Spinach_and_Artichoke_Dip.png';
 
-const menuStarters = function () {
+// Array containing image source paths for starter menu items
+const starterMenuItems = [
+    { imageSrc: Bruschetta_Slices_of_toasted_baguette },
+    { imageSrc: Chicken_Wings },
+    { imageSrc: Fried_Pickles_Crispy_breaded_pickle_chips },
+    { imageSrc: Loaded_Nachos },
+    { imageSrc: Mozzarella_Sticks },
+    { imageSrc: Spinach_and_Artichoke_Dip }
+];
+
+// Function to create the starters menu
+const createStartersMenu = () => {
+    // Selecting the container for the starters menu
     const menuStarters = document.querySelector('.menu-starters');
 
+    // Checking if the starters menu container exists
     if (menuStarters) {
-        for (let i = 0; i < 6; i++) {
+        // Loop through each starter menu item
+        for (let i = 0; i < starterMenuItems.length; i++) {
+            // Create a div element for each item in the starters menu
             const starters = document.createElement('div');
-            starters.classList.add('starters');
-            menuStarters.appendChild(starters);
+            starters.classList.add('starters'); // Adding 'starters' class to the created div
+            menuStarters.appendChild(starters); // Appending the div to the starters menu container
+
+            // Create an image element for the menu item
+            const startersImg = document.createElement('img');
+            startersImg.src = starterMenuItems[i].imageSrc; // Set image source based on the array
+            starters.appendChild(startersImg); // Append the image to the corresponding div
         }
     }
+};
 
-    const starters1 = document.querySelector('.starters:nth-child(1)');
-    const starters1Img = document.createElement('img');
-    starters1Img.src = Bruschetta_Slices_of_toasted_baguette;
-    starters1.appendChild(starters1Img);
-
-    const starters2 = document.querySelector('.starters:nth-child(2)');
-    const starters2Img = document.createElement('img');
-    starters2Img.src = Chicken_Wings;
-    starters2.appendChild(starters2Img);
-
-    const starters3 = document.querySelector('.starters:nth-child(3)');
-    const starters3Img = document.createElement('img');
-    starters3Img.src = Fried_Pickles_Crispy_breaded_pickle_chips;
-    starters3.appendChild(starters3Img);
-
-    const starters4 = document.querySelector('.starters:nth-child(4)');
-    const starters4Img = document.createElement('img');
-    starters4Img.src = Loaded_Nachos;
-    starters4.appendChild(starters4Img);
-
-    const starters5 = document.querySelector('.starters:nth-child(5)');
-    const starters5Img = document.createElement('img');
-    starters5Img.src = Mozzarella_Sticks;
-    starters5.appendChild(starters5Img);
-
-    const starters6 = document.querySelector('.starters:nth-child(6)');
-    const starters6Img = document.createElement('img');
-    starters6Img.src = Spinach_and_Artichoke_Dip;
-    starters6.appendChild(starters6Img);
-}
-
-export default menuStarters;
+export default createStartersMenu; // Exporting the createStartersMenu function

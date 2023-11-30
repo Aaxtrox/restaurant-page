@@ -36,7 +36,7 @@ const nav = function () {
         header.appendChild(menu);
         
         // Add 3 li elements to the menu ul
-        const menuList = ['Home', 'Menu', 'Contact'];
+        const menuList = ['Home', 'Menu', 'About'];
 
         // Loop through the menuList array
         menuList.forEach((item) => {
@@ -89,7 +89,7 @@ const nav = function () {
         header.appendChild(menu);
 
         // Add 3 li elements to the menuHam ul
-        const menuList = ['Home', 'Menu', 'Contact'];
+        const menuList = ['Home', 'Menu', 'About'];
         menuList.forEach((item) => {
             const menuItem = document.createElement('li');
             menuItem.classList.add('menu-item-ham');

@@ -400,6 +400,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Styling for the 'menu' section inside carousel */
 .menu-burgers,
 .menu-kids,
 .menu-sides,
@@ -417,6 +418,7 @@ h2 {
     width: 100%;
     height: auto;
 }
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {

@@ -22,6 +22,18 @@ const menuBurgers = function () {
         Veggie_Burger
     ];
 
+    // Array of burger names
+    const burgerNames = [
+        'Bacon BBQ Burger',
+        'Breakfast Burger',
+        'Classic Cheeseburger',
+        'Hawaiian Luau Burger',
+        'Jalapeo Pepperjack Burger',
+        'Mushroom Swiss Burger',
+        'Southwest Chipotle Burger',
+        'Veggie Burger'
+    ];
+
     // Get the 'menu-burgers' element from the DOM
     const menuBurgersContainer = document.querySelector('.menu-burgers');
 
@@ -37,6 +49,12 @@ const menuBurgers = function () {
             const burgerImg = document.createElement('img');
             burgerImg.src = burgerImages[i];
             burgerDiv.appendChild(burgerImg);
+
+            // Add burger name
+            const burgerName = document.createElement('p');
+            burgerName.classList.add('burger-name');
+            burgerName.innerHTML = burgerNames[i];
+            burgerDiv.appendChild(burgerName);
         }
     }
 }

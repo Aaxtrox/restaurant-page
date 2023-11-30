@@ -419,6 +419,15 @@ h2 {
     height: auto;
 }
 
+/* Styling for text under menu food images */
+.burger p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
     html {

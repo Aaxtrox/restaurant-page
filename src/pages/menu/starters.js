@@ -16,6 +16,16 @@ const starterMenuItems = [
     { imageSrc: Spinach_and_Artichoke_Dip }
 ];
 
+// Array of starter menu item names
+const starterMenuNames = [
+    'Bruschetta',
+    'Chicken Wings',
+    'Fried Pickles',
+    'Loaded Nachos',
+    'Mozzarella Sticks',
+    'Spinach and Artichoke Dip'
+];
+
 // Function to create the starters menu
 const createStartersMenu = () => {
     // Selecting the container for the starters menu
@@ -34,6 +44,12 @@ const createStartersMenu = () => {
             const startersImg = document.createElement('img');
             startersImg.src = starterMenuItems[i].imageSrc; // Set image source based on the array
             starters.appendChild(startersImg); // Append the image to the corresponding div
+
+            // Add starters menu item name
+            const startersName = document.createElement('p');
+            startersName.classList.add('starters-name');
+            startersName.innerHTML = starterMenuNames[i];
+            starters.appendChild(startersName);
         }
     }
 };

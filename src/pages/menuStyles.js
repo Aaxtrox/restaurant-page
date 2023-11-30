@@ -1,6 +1,6 @@
-import { set } from "lodash";
-
+// Function to apply styles based on DOM changes
 const menuStyles = function () {
+    // DOM elements selection
     const home = document.querySelector('#home');
     const menu = document.querySelector('#menu');
     const about = document.querySelector('#about');
@@ -12,10 +12,13 @@ const menuStyles = function () {
 
     const btn = document.querySelector('.btn');
 
+    // Mutation Observer to detect changes in the DOM
     const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-            mutation.addedNodes.forEach((node) => {       
+            mutation.addedNodes.forEach((node) => {      
+                // Apply styles based on the added node's ID 
                 if (node.id === 'home') {
+                    // Styles for 'home' content
                     links.forEach((link) => {
                         link.style.color = 'white';
                     });
@@ -30,6 +33,7 @@ const menuStyles = function () {
                         });
                     }
                 } else if (node.id === 'menu' || node.id === 'about') {
+                    // Styles for 'menu' or 'about' content
                     links.forEach((link) => {
                         link.style.color = 'black';
                     });
@@ -43,19 +47,23 @@ const menuStyles = function () {
         });
     });
 
+    // Observer starts observing the changes when the DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
         observer.observe(document.querySelector('#content'), {
-            childList: true,
-            subtree: true
+            childList: true, // Observe direct child nodes
+            subtree: true // Observe all descendants of the target node
         });
     });
 
+    // Applying styles based on certain conditions
     if (menuHam) {
         if (menuHam.classList.contains('active')) {
+            // Styles when menuHam has 'active' class
             lines.forEach((line) => {
                 line.style.stroke = 'black';
             });
         } else if (!menuHam.classList.contains('active') && home) {
+            // Styles when menuHam doesn't have 'active' class and 'home' exists
             lines.forEach((line) => {
                 setTimeout(() => {
                     line.style.stroke = 'white';
@@ -65,5 +73,5 @@ const menuStyles = function () {
     }
 }
 
-
+// Export the 'menuStyles' function
 export default menuStyles;

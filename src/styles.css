@@ -345,13 +345,30 @@ h2 {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #about img {
     width: 30rem;
     height: auto;
+}
+
+#aboutText {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#aboutText h1 {
+    font-size: 2rem;
+    padding: 0 2rem 0 2rem;
+    text-align: center;
+}
+
+#aboutText p {
+    font-size: 1rem;
+    padding: 0 2rem 0 2rem;
+    text-align: center;
 }
 
 /* Styling for the 'carousel' section */

@@ -18,11 +18,12 @@ const carouselMenuCard = function () {
         const prevArrow = document.querySelector('.arrow.prev');
         const nextArrow = document.querySelector('.arrow.next');
 
-        // Adding click event listeners to arrows to loop the carousel
+        // Adding click event listeners to arrow to loop the carousel
         prevArrow.addEventListener('click', () => {
             loopCarousel();
         });
 
+        // Adding click event listeners to arrow to loop the carousel
         nextArrow.addEventListener('click', () => {
             loopCarousel();
         });

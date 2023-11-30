@@ -1,38 +1,37 @@
+// Importing images for kids menu items
 import Chicken_Tenders from '../../assets/kids/Chicken_Tenders.png';
 import Grilled_Cheese_Sandwich from '../../assets/kids/Grilled_Cheese_Sandwich.png';
 import Mini_Cheeseburger from '../../assets/kids/Mini_Cheeseburger.png';
 import Mini_Corn_Dogs from '../../assets/kids/Mini_Corn_Dogs.png';
 
-const menuKids = function () {
+// Array containing image source paths for kids menu items
+const kidsMenuItems = [
+    { imageSrc: Chicken_Tenders },
+    { imageSrc: Grilled_Cheese_Sandwich },
+    { imageSrc: Mini_Cheeseburger },
+    { imageSrc: Mini_Corn_Dogs }
+];
+
+// Function to create the kids menu
+const createKidsMenu = () => {
+    // Selecting the container for the kids menu
     const menuKids = document.querySelector('.menu-kids');
 
+    // Checking if the kids menu container exists
     if (menuKids) {
-        for (let i = 0; i < 4; i++) {
+        // Loop through each kids menu item
+        for (let i = 0; i < kidsMenuItems.length; i++) {
+            // Create a div element for each item in the kids menu
             const kids = document.createElement('div');
-            kids.classList.add('kids');
-            menuKids.appendChild(kids);
+            kids.classList.add('kids'); // Adding 'kids' class to the created div
+            menuKids.appendChild(kids); // Appending the div to the kids menu container
+
+            // Create an image element for the menu item
+            const kidsImg = document.createElement('img');
+            kidsImg.src = kidsMenuItems[i].imageSrc; // Set image source based on the array
+            kids.appendChild(kidsImg); // Append the image to the corresponding div
         }
     }
+};
 
-    const kids1 = document.querySelector('.kids:nth-child(1)');
-    const kids1Img = document.createElement('img');
-    kids1Img.src = Chicken_Tenders;
-    kids1.appendChild(kids1Img);
-
-    const kids2 = document.querySelector('.kids:nth-child(2)');
-    const kids2Img = document.createElement('img');
-    kids2Img.src = Grilled_Cheese_Sandwich;
-    kids2.appendChild(kids2Img);
-
-    const kids3 = document.querySelector('.kids:nth-child(3)');
-    const kids3Img = document.createElement('img');
-    kids3Img.src = Mini_Cheeseburger;
-    kids3.appendChild(kids3Img);
-
-    const kids4 = document.querySelector('.kids:nth-child(4)');
-    const kids4Img = document.createElement('img');
-    kids4Img.src = Mini_Corn_Dogs;
-    kids4.appendChild(kids4Img);
-}
-
-export default menuKids;
+export default createKidsMenu; // Exporting the createKidsMenu function

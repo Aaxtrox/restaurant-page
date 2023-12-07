@@ -1,6 +1,3 @@
-// Importing the 'logo' image from the specified file path
-import logo from '../assets/logo.png';
-
 // Function to create a paragraph element
 const createParagraph = (text) => {
     const paragraph = document.createElement('p');
@@ -35,11 +32,6 @@ const createAboutSection = () => {
     const about = document.createElement('div');
     about.id = 'about';
     aboutSection.appendChild(about);
-
-    // Create an image logo element
-    const logoImg = document.createElement('img');
-    logoImg.src = logo;
-    about.appendChild(logoImg);
 
     // Create a 'div' element to contain the text content of the 'About' section
     const aboutText = document.createElement('div');

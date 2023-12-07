@@ -429,7 +429,7 @@ h2 {
 .arrow {
     pointer-events: auto;
     cursor: pointer;
-    padding: 0.635rem;
+    padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
 }

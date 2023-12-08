@@ -72,7 +72,7 @@ function sides () {
 
 // Function to handle carousel loop based on selected item
 function loopCarousel () {
-    // Selecting the carousel menu items
+    // Selecting DOM elements
     const menu = document.querySelector('#menu');
     const carouselMenuItems = document.querySelectorAll('.carousel-menu-item');
     const menuStarters = document.querySelector('.menu-starters');

@@ -1,4 +1,5 @@
 # restaurant-page
+This project, developed within The Odin Project bootcamp, highlights my adeptness in webpack and JavaScript for DOM manipulation. The initial setup involved configuring webpack via npm and organizing the project into 'src' and 'dist' directories. Employing JavaScript modules, I dynamically generated all HTML content for the restaurant website, ensuring a completely dynamic user interface.
 
 ## Demo
 <a href="https://aaxtrox.github.io/restaurant-page/">Live Demo</a>

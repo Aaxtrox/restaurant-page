@@ -415,6 +415,7 @@ h2 {
     padding: 0 0.635rem 1.25rem 0.635rem;
 }
 
+/* Styling for the 'carousel' section arrows */
 .arrows {
     padding-top: 5rem;
     position: absolute;
@@ -449,6 +450,7 @@ h2 {
     grid-gap: 4rem;
 }
 
+/* Styling for the 'menu' section food images */
 .burger img,
 .kids img,
 .sides img,
@@ -457,7 +459,7 @@ h2 {
     height: auto;
 }
 
-/* Styling for text under menu food images */
+/* Styling for div elements inside the 'menu' section containing food images and text */
 .kids,
 .burger,
 .sides,
@@ -468,6 +470,7 @@ h2 {
     align-items: center;
 }
 
+/* Styling for the 'menu' section food text */
 .burger p,
 .kids p,
 .sides p,
